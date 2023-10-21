@@ -1,3 +1,5 @@
+import { Link, useNavigate } from "react-router-dom";
+
 function Navbar(){
     const styles = {
         bar: {
@@ -17,14 +19,15 @@ function Navbar(){
             gap: '30px'
         },
     };
+    const navigate = useNavigate();
 
     return(
         <div style={styles.bar}>
             <div style={styles.containerFront}>
                 <div>1NorGate</div>
-                <div>Home</div>
+                <button onClick={()=>navigate('/')}>Home</button>
                 <div>Cart</div>
-                <div>My Game</div>
+                <button onClick={()=>navigate('/myGame')}>My Game</button>
             </div>
             
             <div style={styles.containerBack}>

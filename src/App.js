@@ -7,7 +7,8 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route exact path='/' element={<MyGame />} />
+        <Route exact path='/'       element={<Home />} />
+        <Route exact path='/myGame' element={<MyGame />} />
       </Routes>
     </Router>
   );
